@@ -13,7 +13,7 @@ user_result = None
 # если /start, /help
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
-    # убрать клавиатуру Telegram полностью
+    
     markup = types.ReplyKeyboardRemove(selective=False)
 
     msg = bot.send_message(message.chat.id,
